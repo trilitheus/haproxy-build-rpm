@@ -1,0 +1,8 @@
+version: '2'
+
+services:
+  fpm:
+    build: .
+    volumes:
+      - .:/tmp/destdir
+    entrypoint: ['sh', '-c', '/usr/local/bin/build_haproxy.sh']
